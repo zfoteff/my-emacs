@@ -9,21 +9,25 @@
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type 'relative)
 
+(require 'org-superstar)
+(setq org-superstar-headline-bullets-list '(?◉ ?○ #x25C8 #x25C7))
+(add-hook 'org-mode-hook (lambda () (org-superstar-mode 1)))
+
 (setq org-directory "~/org/")
 (after! org
   (setq org-log-done t)
   (setq org-log-into-drawer t))
 
-;; Org Agenda
-(setq org-agenda-files '(directory-files-recursively "~/org/" "\\.org$"))
-(setq org-todo-keywords
-      '((sequence "TODO" "WORKING" "BLOCKED" "|" "DONE" "CANCELLED")
+  ;; Org Agenda
+  (setq org-agenda-files '(directory-files-recursively "~/org/" "\\.org$"))
+  (setq org-todo-keywords
+        '((sequence "TODO" "WORKING" "BLOCKED" "|" "DONE" "CANCELLED")
         (sequence "STRAT" "IDEA" "BLOCKED" "|" "DONE")
         (sequence "APPT" "MEETING" "|" "DONE" "CANCELLED")
         (sequence "[ ]" "[-]" "[?]" "[X]")))
 
-(setq org-todo-keyword-faces
-      '(("[ ]" . (:foreground "#8d968f" :weight bold))
+  (setq org-todo-keyword-faces
+        '(("[ ]" . (:foreground "#8d968f" :weight bold))
         ("[-]" . (:foreground "#187ddb" :weight bold))
         ("[?]" . (:foreground "#a104c4" :weight bold))
         ("[X]" . (:foreground "#0cab21" :weight bold))
@@ -37,6 +41,10 @@
         ("DONE" . (:foreground "white" :background "#0cab21"))
         ("CANCELLED" . (:foreground "white" :background "red" :strike-through))))
 
+;; Neotree Configuration
+(after! neotree
+  (advice-remove #'neo-util--set-window-width 'ignore))
+
 ;; Python Configuration
-(setq +python-ipython-repl-args '("-i" "--simple-prompt" "--no-color-info"))
+(setq +python-ipython-repl-args '("-i" "--simple-prompt"))
 (setq +python-jupyter-repl-args '("--simple-prompt"))
