@@ -6,7 +6,7 @@
  '(ansi-color-names-vector
    ["#282c34" "#ff6c6b" "#98be65" "#ECBE7B" "#51afef" "#c678dd" "#46D9FF" "#bbc2cf"])
  '(custom-safe-themes
-   '("835868dcd17131ba8b9619d14c67c127aa18b90a82438c8613586331129dda63" "4b0e826f58b39e2ce2829fab8ca999bcdc076dec35187bf4e9a4b938cb5771dc" "a0be7a38e2de974d1598cf247f607d5c1841dbcef1ccd97cded8bea95a7c7639" "c2aeb1bd4aa80f1e4f95746bda040aafb78b1808de07d340007ba898efa484f5" "353ffc8e6b53a91ac87b7e86bebc6796877a0b76ddfc15793e4d7880976132ae" default))
+   '("ff24d14f5f7d355f47d53fd016565ed128bf3af30eb7ce8cae307ee4fe7f3fd0" "ae426fc51c58ade49774264c17e666ea7f681d8cae62570630539be3d06fd964" "e1f4f0158cd5a01a9d96f1f7cdcca8d6724d7d33267623cc433fe1c196848554" "7e377879cbd60c66b88e51fad480b3ab18d60847f31c435f15f5df18bdb18184" "02f57ef0a20b7f61adce51445b68b2a7e832648ce2e7efb19d217b6454c1b644" "da75eceab6bea9298e04ce5b4b07349f8c02da305734f7c0c8c6af7b5eaa9738" "afa47084cb0beb684281f480aa84dab7c9170b084423c7f87ba755b15f6776ef" "4b0e826f58b39e2ce2829fab8ca999bcdc076dec35187bf4e9a4b938cb5771dc" "a0be7a38e2de974d1598cf247f607d5c1841dbcef1ccd97cded8bea95a7c7639" "c2aeb1bd4aa80f1e4f95746bda040aafb78b1808de07d340007ba898efa484f5" "353ffc8e6b53a91ac87b7e86bebc6796877a0b76ddfc15793e4d7880976132ae" default))
  '(exwm-floating-border-color "#191b20")
  '(fci-rule-color "#5B6268")
  '(highlight-tail-colors
@@ -20,7 +20,7 @@
  '(jdee-db-spec-breakpoint-face-colors (cons "#1B2229" "#3f444a"))
  '(objed-cursor-color "#ff6c6b")
  '(package-selected-packages
-   '(lsp-python-ms emacsql-sqlite f org-roam org-superstar cmake-mode))
+   '(ligature fira-code-mode emacsql-sqlite-module org-roam emacsql-sqlite lsp-python-ms org-superstar cmake-mode))
  '(pdf-view-midnight-colors (cons "#bbc2cf" "#282c34"))
  '(rustic-ansi-faces
    ["#282c34" "#ff6c6b" "#98be65" "#ECBE7B" "#51afef" "#c678dd" "#46D9FF" "#bbc2cf"])
