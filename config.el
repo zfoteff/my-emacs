@@ -11,7 +11,7 @@
 ;; Doom config
 (setq doom-theme 'doom-tomorrow-night)
 (setq doom-modeline-height 35)
-(setq doom-font (font-spec :family "FiraCode" :size 15 :weight 'medium)
+(setq doom-font (font-spec :family "FiraCode" :size 15 :weight 'semibold)
       doom-variable-pitch-font (font-spec :family "FiraCode" :size 13))
 
 ;; General editor config

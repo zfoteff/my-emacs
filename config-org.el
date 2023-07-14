@@ -30,7 +30,7 @@
 
 (setq org-roam-capture-templates
       '(("d" "default" plain "%?"
-         :target (file+head "%<%Y%m%d%H%M%S>-${slug}.org"
+         :target (file+head "${slug}.org"
                             "${title}\n#+author:\tzfoteff\n#+date:\txx\n#+summary:\txx")
          :unnarrowed t)))
 
@@ -38,7 +38,7 @@
   (setq org-roam-list-files-commands '(find fd fdfind rg)))
 
 ;; Org Agenda
-(setq org-agenda-files '(directory-files-recursively "~/org/" "\\.org$"))
+(setq org-agenda-files (directory-files-recursively org-directory (rx ".org" eos)))
 (setq org-todo-keywords
       '((sequence "TODO" "WORKING" "BLOCKED" "|" "DONE" "CANCELLED")
         (sequence "STRAT" "IDEA" "BLOCKED" "|" "DONE")
