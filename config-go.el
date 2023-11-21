@@ -1,4 +1,5 @@
-;;; config-go.el -*- lexical-binding: t; -*-
+;;; config-go.el --- Summary: Go config for my Emacs
+;;; Commentary:
 
 (require 'go-mode)
 (require 'lsp-mode)
@@ -26,9 +27,11 @@
      (lambda (proc _)))))
 
 (defun lsp-go-install-save-hooks ()
+  (lsp-headerline-breadcrumb-mode t)
   (add-hook 'before-save-hook
         #'lsp-format-buffer t t
-        #'lsp-organize-imports t t))
+        #'lsp-organize-imports t t
+        ))
 
 (add-hook 'go-mode-hook #'lsp-go-install-save-hooks
           'go-mode-hook #'lsp-deferred)
@@ -38,8 +41,9 @@
       lsp-gopls-staticcheck t
       lsp-gopls-complete-unimported t)
 
-(use-package lsp-ui
+(use-package! lsp-ui
   :ensure t
   :commands lsp-ui-mode)
 
 (provide 'config-go)
+;;; config-go.el ends here
