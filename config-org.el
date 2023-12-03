@@ -2,8 +2,12 @@
 ;;; Code:
 (require 'org-superstar)
 
-;;; Start org superstar mode
-;(add-hook 'org-mode-hook (lambda () (org-superstar-mode 1)))
+;;; Start org mode in superstar mode with no line numbers
+(defun org-config ()
+  (org-superstar-mode 1)
+  (display-line-numbers-mode 0)
+  )
+(add-hook 'org-mode-hook 'org-config)
 
 (setq org-directory "~/org/"
       org-log-done t
@@ -13,7 +17,7 @@
       org-auto-align-tags nil
       org-log-into-drawer t
       org-id-locations-file "~/org/.orgids"
-      org-id-locations-file-relative nil
+      org-id-locations-file-relative t
       org-superstar-headline-bullets-list '(?◉ ?○ #x25C8 #x25C7))
 
 ;; Org Agenda

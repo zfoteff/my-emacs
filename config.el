@@ -3,7 +3,7 @@
 ;;; Commentary: Base config for my emacs setup
 
 ;; Custom configuration settings path
-(add-to-list 'load-path "~/.doom.d/")
+(add-to-list 'load-path "~/.config/doom")
 
 (require 'config-go)
 (require 'config-python)
